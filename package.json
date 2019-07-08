@@ -1,0 +1,14 @@
+{
+  "name": "online-shop",
+  "version": "1.0.0",
+  "description": "An online shop built with Node Js, Express and Mongo DB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sylvia Onwukwe",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
