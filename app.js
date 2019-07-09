@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
 // set up moongoose
-var mongoDB = 'mongodb+srv://sylvia:Uppertexy667@cluster0-gsdzz.mongodb.net/test?retryWrites=true&w=majority'
+var mongoDB = 'mongodb://app-db1:app-db1@ds249127.mlab.com:49127/app-db'
 mongoose.connect(mongoDB, {useNewUrlParser: true})
 console.log(mongoDB)
 
