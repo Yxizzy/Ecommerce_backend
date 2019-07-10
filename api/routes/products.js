@@ -64,7 +64,7 @@ router.post('/', upload.single('productImage'), (req, res, next) => {
         name: req.body.name,
         price: req.body.price,
         description: req.body.description,
-        productImage: req.file.path,
+        // productImage: req.file.path,
         category: req.body.category,
         color: req.body.color
     })
@@ -75,7 +75,7 @@ router.post('/', upload.single('productImage'), (req, res, next) => {
                 name: result.name,
                 price: result.price,
                 description: result.description,
-                productImage: result.productImage,
+                // productImage: result.productImage,
                 category: result.category,
                 color: result.color
             }
