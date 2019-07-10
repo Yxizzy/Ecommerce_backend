@@ -8,13 +8,17 @@ const mongoose = require('mongoose')
 
 // set middlewares
 app.use(morgan('dev'));
+app.use('/uploads',express.static('uploads'));
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
 // set up moongoose
 var mongoDB = 'mongodb://app-db1:app-db1@ds249127.mlab.com:49127/app-db'
-mongoose.connect(mongoDB, {useNewUrlParser: true})
-console.log(mongoDB)
+mongoose.connect(mongoDB, {useNewUrlParser: true}).then(() => {
+console.log("Connected to Database");
+}).catch((err) => {
+    console.log("Not Connected to Database ERROR! ", err);
+});
 
 // set headers
 app.use((req, res, next) => {
