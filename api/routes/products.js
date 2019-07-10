@@ -69,7 +69,7 @@ router.post('/', upload.single('productImage'), (req, res, next) => {
         color: req.body.color
     })
     product.save().then(result => {
-        res.status(200).json({
+        res.status(201).json({
             message: 'Post Requests to Products',
             newProduct: {
                 name: result.name,
