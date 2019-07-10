@@ -64,7 +64,7 @@ router.post('/', upload.single('productImage'), (req, res, next) => {
         name: req.body.name,
         price: req.body.price,
         description: req.body.description,
-        productImage: req.file.path,
+        productImage: req.file.path || req.file.name,
         category: req.body.category,
         color: req.body.color
     })
