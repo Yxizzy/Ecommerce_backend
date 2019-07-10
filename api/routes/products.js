@@ -13,18 +13,18 @@ const storage = multer.diskStorage({
         cb(null, new Date().toISOString()+file.originalname)
     }
 })
-const fileFilter=(req,file, cb) => {
-    if (file.mimetype === 'image/jpeg' || file.mimetype ==='image/png'){
-        cb(null, true)
-    }
-}
-const upload = multer({
-    storage: storage, 
-    limits: {
-        fileSize: 1024 * 1024 * 5
-},
-fileFilter: fileFilter
-});
+// const fileFilter=(req,file, cb) => {
+//     if (file.mimetype === 'image/jpeg' || file.mimetype ==='image/png'){
+//         cb(null, true)
+//     }
+// }
+// const upload = multer({
+//     storage: storage, 
+//     limits: {
+//         fileSize: 1024 * 1024 * 5
+// },
+// fileFilter: fileFilter
+// });
 
 // create get and post requests for products
 router.get('/', (req, res, next) => {
